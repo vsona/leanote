@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  db:
+    restart: always
+    image: mongo:3.2.3
+    volumes:
+      - ./mongodb_backup/leanote_install_data:/init_data
+
+  server:
+    environment:
+      - SITE_URL="http://localhost:9000"
+    depends_on:
+      - db
+    restart: always
+    build: ./leanote
+    ports:
+     - "127.0.0.1:9000:9000"
+    links:
+      - db:mongodb
+volumes:
+    leanote_data:
