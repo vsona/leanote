@@ -7,6 +7,7 @@
 ### 准备
 - [安装docker]
 - [安装docker-compose](https://docs.docker.com/compose/install/)
+    - sudo pip install -U docker-compose
 
 ### Quick Start
 1. ```chmod a+x ./init.sh```
