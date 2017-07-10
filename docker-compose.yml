@@ -15,8 +15,11 @@ services:
     restart: always
     build: ./leanote
     ports:
-     - "127.0.0.1:9000:9000"
+      - "127.0.0.1:9000:9000"
     links:
       - db:mongodb
+    volumes:
+      - ./leanote-conf/app.conf:/usr/local/leanote/conf/app.conf
+
 volumes:
     leanote_data:
