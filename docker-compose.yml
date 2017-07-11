@@ -5,6 +5,7 @@ services:
     restart: always
     image: mongo:3.2.3
     volumes:
+      - ./data:/data/db
       - ./mongodb_backup/leanote_install_data:/init_data
 
   server:
@@ -15,7 +16,7 @@ services:
     restart: always
     build: ./leanote
     ports:
-      - "47.94.238.249:9000:9000"
+      - "9000:9000"
     links:
       - db:mongodb
     volumes:
