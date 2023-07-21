@@ -24,3 +24,4 @@ docker-compose exec db mongorestore -h localhost -d leanote --dir /init_data
 - user1 username: ```admin```, password: ```abc123``` (管理员, 只有该用户才有权管理后台, 请及时修改密码)
 - user2 username: ```demo@leanote.com```, password: ```demo@leanote.com``` (仅供体验使用)
 
+1
